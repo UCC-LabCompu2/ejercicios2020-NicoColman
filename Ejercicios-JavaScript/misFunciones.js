@@ -81,6 +81,11 @@ function mostrar_ocultar(valorM){
         document.getElementById("divM").style.display = 'none';
     }
 }
+/**
+ * Mostrar Calcular Suma .
+ * @method calcularS.
+ * @return -
+ */
 function calcularS() {
     var num1, num2;
 
@@ -88,7 +93,11 @@ function calcularS() {
     num2= document.getElementsByName("sum_num2")[0].value;
     document.getElementsByName("sum_total")[0].innerHTML=  Number(num1) + Number(num2);
 }
-
+/**
+ * Mostrar Calcular Resta.
+ * @method calcularR.
+ * @return -
+ */
 function calcularR() {
     var num1, num2;
 
@@ -96,7 +105,11 @@ function calcularR() {
     num2= document.getElementsByName("res_num2")[0].value;
     document.getElementsByName("res_total")[0].innerHTML=  Number(num1) - Number(num2);
 }
-
+/**
+ * Mostrar Calcular Multiplicacion .
+ * @method calcularM.
+ * @return -
+ */
 function calcularM() {
     var num1, num2;
 
@@ -105,7 +118,11 @@ function calcularM() {
     document.getElementsByName("mul_total")[0].innerHTML=  Number(num1) * Number(num2);
 
 }
-
+/**
+ * Mostrar Calcular Division .
+ * @method calcularD.
+ * @return -
+ */
 function calcularD() {
     var num1, num2;
 
@@ -114,7 +131,12 @@ function calcularD() {
     document.getElementsByName("div_total")[0].innerHTML=  Number(num1) / Number(num2);
 
 }
-function CargarWeb() {
+/**
+ * Mostrar Segunda Pagina .
+ * @method calcularS.
+ * @return -
+ */
+function Cargarpag() {
     var cant, unidad, urlcomp;
 
     cant= document.getElementById("distancia").value;
@@ -122,7 +144,11 @@ function CargarWeb() {
     urlcomp= "segundaWeb.html#" + cant + "#" + unidad;
     window.open(urlcomp);
 }
-
+/**
+ * Mostrar  cargar los datos
+ * @method Cres.
+ * @return -
+ */
 function CRes() {
     var urlComp, can, un;
 
@@ -132,7 +158,30 @@ function CRes() {
 
     document.getElementById("dist").value= can + " " + un;
 }
+/**
+ * Mostrar Diubujar auto .
+ * @method dibujarimagen.
+ * @param {number}.
+ * @return -
+ */
+function dibujarimagen(posX, posY) {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
 
+    console.log(posX,posY);
+    var img= new Image();
+    img.src= "images/auto.png";
+
+    canvas.width=canvas.width;
+    img.onload = function(){
+        ctx.drawImage(img, posX, posY);
+    };
+}
+/**
+ * Mostrar dibujar circulo y cuadrado .
+ * @method dibujarcirycuadrado.
+ * @return -
+ */
 function dibujarcirycuadrado() {
     var canvas =document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -148,8 +197,14 @@ function dibujarcirycuadrado() {
     ctx.fill();
 
 }
+
+/**
+ * Mostrar dibujar paint .
+ * @method dibujarima.
+ * @return -
+ */
 var bandera;
-function dibujarimagen(event) {
+function dibujarima(event) {
     var canvas= document.getElementById("CanvasADibujar")
     var ctx= canvas.getContext("2d");
 
@@ -164,21 +219,19 @@ function dibujarimagen(event) {
 
     }
 }
-
-
-
-
-function dibujarimagen(posX, posY) {
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    console.log(posX,posY);
-    var img= new Image();
-    img.src= "images/auto.png";
+/**
+ * Mostrar limpiar paint .
+ * @method Limpiar.
+ * @return -
+ */
+function Limpiar() {
+    var canvas= document.getElementById("CanvasADibujar");
+    var ctx= canvas.getContext("2d");
 
     canvas.width=canvas.width;
-    img.onload = function(){
-        ctx.drawImage(img, posX, posY);
-    };
 }
+
+
+
+
 
