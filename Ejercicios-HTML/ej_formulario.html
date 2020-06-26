@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Formulario</title>
+    <style>
+        form {
+            display: block;
+            margin-top: 0em;
+        }
+    </style>
+</head>
+<body>
+<!--Cree un Formulario con los campos que se proponen a continuacion-->
+<!--Agregue el atributo legend-->
+
+<!--Si tienes dudas de como hacer un formulario, puedes consultar:
+    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
+
+<h2>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h2>
+
+<form id="form1">
+
+    <legend><h4><u><b>Completa el Formulario:</b></u></h4></legend>
+
+    <p>
+        <label for="nombre">Nombre: &nbsp</label>
+        <input type="text" size="30" id="nombre" required>
+    </p>
+
+    <p>
+        <label for="apellido">Apellido: &nbsp</label>
+        <input type="text" size="30" id="apellido" required>
+    </p>
+
+    <p>
+        Sexo: &nbsp&nbsp;
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" checked/>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino"/>
+    </p>
+
+    <!-- Como pedir un required al campo "SEXO", porque de la forma que se, se lo deberia pedir a los 2 y la opcion es 1 -->
+
+    <p>
+        <label for="edad">Edad: &nbsp</label>
+        <input type="number" id="edad" name="edad" min="1" max="100" step="1" required/>
+    </p>
+
+    <!-- Email con Dominio Valido, control? -->
+
+    <p>
+        <label for="email">Email: &nbsp</label>
+        <input type="email" size="40" id="email"/>
+    </p>
+
+    <h5>Completa la informacion del usuario:</h5>
+
+    <p>
+        <label for="usuario">Usuario:&nbsp</label>
+        <input type="text" size="30" id="usuario" maxlenght="12" placeholder="Maximo 12 Caracteres" required>
+    </p>
+    <p>
+        <label for="contrasena">Password:&nbsp</label>
+        <input type="password" size="30" id="contrasena" minlenght="8" placeholder="Minimo 8 Caracteres" required>
+    </p>
+    <p>
+        <label for="ccontrasena">Confirmar Password:&nbsp</label>
+        <input type="password" size="30" id="ccontrasena" required>
+    </p>
+
+    <!-- Como controlar que las contraseñas sean iguales?  -->
+
+    <h5>Tipo de Servicio:</h5>
+
+    <p>
+        <input type="checkbox" id="free" name="servicio1" value="free" checked/>
+        <label for="free">Free</label><br>
+        <input type="checkbox" id="standard" name="servicio2" value="standard"/>
+        <label for="standard">Standard</label><br>
+        <input type="checkbox" id="premium" name="servicio3" value="premium"/>
+        <label for="premium">Premium</label>
+    </p>
+
+    <p>
+        <label for="tema"><b>Tema:</b>&nbsp</label>
+        <select id="tema">
+            <option value="politica">Politica</option>
+            <option value="negocios">Negocios</option>
+            <option value="tecnologia">Tecnologia</option>
+            <option value="salud">Salud</option>
+        </select>
+    </p>
+
+    <p>
+        <textarea name="comentarios" rows="5" cols="60" placeholder="Escriba aqui sus comentarios."></textarea>
+    </p>
+
+    <input type="submit" value="ENVIAR"/>
+    <input type="reset" value="BORRAR"/>
+
+    <!-- Como visualizamos las respuestas? -->
+
+</form>
+</body>
+</html>
